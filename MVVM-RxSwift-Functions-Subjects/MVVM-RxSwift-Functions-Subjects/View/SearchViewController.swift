@@ -74,34 +74,7 @@ class SearchViewController: UIViewController {
                 let safariViewController = SFSafariViewController(url: URL(string: repoUrl)!)
                 strongSelf.present(safariViewController, animated: true)
             })
-            .disposed(by: disposeBag)
-        
-        
-//        let input = SearchViewModel.Input(
-//            ready: rx.viewWillAppear.asDriver(),
-//            selectedIndex: tableView.rx.itemSelected.asDriver(),
-//            searchText: searchBar.rx.text.orEmpty.asDriver())
-//
-//        let output = viewModel.transform(input: input)
-//
-//        output.repos
-//            .drive(tableView.rx.items(cellIdentifier: ArticleCell.identifier, cellType: ArticleCell.self)) { (row, element, cell) in
-//                cell.configure(repo: element)
-//            }
-//            .disposed(by: disposeBag)
-//
-//        output.loading
-//            .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-//            .disposed(by: disposeBag)
-//
-//        output.selectedRepoUrl
-//            .drive(onNext: { [weak self] repoUrl in
-//                guard let strongSelf = self else { return }
-//                let safariViewController = SFSafariViewController(url: URL(string: repoUrl)!)
-//                strongSelf.present(safariViewController, animated: true, completion: nil)
-//            })
-//            .disposed(by: disposeBag)
-        
+            .disposed(by: disposeBag)        
     }
     
     override func didReceiveMemoryWarning() {
