@@ -53,43 +53,6 @@ class SearchViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        // Inputs
-//        rx.viewWillAppear
-//            .asObservable()
-//            .bind(to: viewModel.viewWillAppearSubject)
-//            .disposed(by: disposeBag)
-//
-//        tableView.rx.itemSelected
-//            .asObservable()
-//            .bind(to: viewModel.selectedIndexSubject)
-//            .disposed(by: disposeBag)
-//
-//        searchBar.rx.text
-//            .orEmpty // 空文字とnilを無視
-//            .asObservable()
-//            .bind(to: viewModel.searchQuerySubject)
-//            .disposed(by: disposeBag)
-        
-        // Outputs
-//        viewModel.repos
-//            .drive(tableView.rx.items(cellIdentifier: ArticleCell.identifier,
-//                                      cellType: ArticleCell.self)
-//            ) { (row, element, cell) in
-//                cell.configure(repo: element)
-//            }
-//            .disposed(by: disposeBag)
-//
-//        viewModel.loading
-//            .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
-//            .disposed(by: disposeBag)
-//
-//        viewModel.selectedRepoUrl
-//            .drive(onNext: { [weak self] repoUrl in
-//                guard let strongSelf = self else { return }
-//                let safariViewController = SFSafariViewController(url: URL(string: repoUrl)!)
-//                strongSelf.present(safariViewController, animated: true, completion: nil)
-//            })
-//            .disposed(by: disposeBag)
     }
     
     override func didReceiveMemoryWarning() {
