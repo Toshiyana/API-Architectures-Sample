@@ -29,7 +29,6 @@ class SearchViewController: UIViewController {
 
     private func bindViewModel() {
         let input = SearchViewModel.Input(
-            ready: rx.viewWillAppear.asDriver(),
             selectedIndex: tableView.rx.itemSelected.asDriver(),
             searchText: searchBar.rx.text.orEmpty.asDriver())
         

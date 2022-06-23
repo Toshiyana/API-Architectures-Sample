@@ -10,7 +10,6 @@ import RxCocoa
 
 final class SearchViewModel: ViewModelType {
     struct Input {
-        let ready: Driver<Void>
         let selectedIndex: Driver<IndexPath>
         let searchText: Driver<String>
     }
@@ -33,15 +32,7 @@ final class SearchViewModel: ViewModelType {
     
     func transform(input: Input) -> Output {
         let loading = ActivityIndicator()
-        
-        // 検索前に表示するリポジトリ
-        let initialRepos = input.ready
-            .flatMap { _ in
-                self.dependencies.networking.searchRepos(withQuery: "swift")
-                    .trackActivity(loading)
-                    .asDriver(onErrorJustReturn: [])
-            }
-        
+                
         let searchRepos = input.searchText
             .filter { $0.count > 2 }
             .debounce(.milliseconds(300))
@@ -52,7 +43,7 @@ final class SearchViewModel: ViewModelType {
                     .asDriver(onErrorJustReturn: [])
             }
         
-        let repos = Driver.merge(initialRepos, searchRepos)
+        let repos = searchRepos
         
         let selectedRepoUrl = input.selectedIndex
             .withLatestFrom(repos) { (indexPath, repos) in
