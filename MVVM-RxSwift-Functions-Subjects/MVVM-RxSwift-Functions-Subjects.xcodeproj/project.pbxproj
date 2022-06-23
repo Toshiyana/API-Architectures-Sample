@@ -23,7 +23,6 @@
 		993F142628649DD200FE2AEB /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 993F141928649DD200FE2AEB /* ArticleCell.xib */; };
 		993F142728649DD200FE2AEB /* NetworkingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F141B28649DD200FE2AEB /* NetworkingApi.swift */; };
 		993F142828649DD200FE2AEB /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F141D28649DD200FE2AEB /* ActivityIndicator.swift */; };
-		993F142928649DD200FE2AEB /* Rx+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F141E28649DD200FE2AEB /* Rx+UIViewController.swift */; };
 		993F142A28649DD200FE2AEB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F142028649DD200FE2AEB /* SearchViewModel.swift */; };
 		993F142B28649DD200FE2AEB /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F142228649DD200FE2AEB /* Repo.swift */; };
 		993F14302864BF4900FE2AEB /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F142F2864BF4900FE2AEB /* AppEnvironment.swift */; };
@@ -69,7 +68,6 @@
 		993F141928649DD200FE2AEB /* ArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
 		993F141B28649DD200FE2AEB /* NetworkingApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingApi.swift; sourceTree = "<group>"; };
 		993F141D28649DD200FE2AEB /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		993F141E28649DD200FE2AEB /* Rx+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rx+UIViewController.swift"; sourceTree = "<group>"; };
 		993F142028649DD200FE2AEB /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		993F142228649DD200FE2AEB /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		993F142F2864BF4900FE2AEB /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				993F141D28649DD200FE2AEB /* ActivityIndicator.swift */,
-				993F141E28649DD200FE2AEB /* Rx+UIViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -483,7 +480,6 @@
 				993F13E728649D4400FE2AEB /* SceneDelegate.swift in Sources */,
 				993F142A28649DD200FE2AEB /* SearchViewModel.swift in Sources */,
 				993F142B28649DD200FE2AEB /* Repo.swift in Sources */,
-				993F142928649DD200FE2AEB /* Rx+UIViewController.swift in Sources */,
 				993F14302864BF4900FE2AEB /* AppEnvironment.swift in Sources */,
 				993F142428649DD200FE2AEB /* SearchViewController.swift in Sources */,
 				993F142728649DD200FE2AEB /* NetworkingApi.swift in Sources */,

@@ -9,7 +9,6 @@ import RxSwift
 import RxCocoa
 
 protocol SearchViewModelInputs {
-    func viewWillAppear()
     func didSelect(index: IndexPath)
     func didSearch(query: String)
 }
@@ -29,16 +28,7 @@ final class SearchViewModel: SearchViewModelType, SearchViewModelInputs, SearchV
     init() {
         let loading = ActivityIndicator()
         self.loading = loading.asDriver()
-        
-        let initialRepos = self.viewWillAppearSubject
-            .asObservable()
-            .flatMap { _ in
-                AppEnvironment.current.networkingService
-                    .searchRepos(withQuery: "swift")
-                    .trackActivity(loading)
-            }
-            .asDriver(onErrorJustReturn: [])
-        
+                
         let searchRepos = self.didSearchSubject
             .asObservable()
             .filter { $0.count > 2 }
@@ -51,7 +41,7 @@ final class SearchViewModel: SearchViewModelType, SearchViewModelInputs, SearchV
             }
             .asDriver(onErrorJustReturn: [])
         
-        self.repos = Driver.merge(initialRepos, searchRepos)
+        self.repos = searchRepos
         
         self.selectedRepoUrl = self.didSelectSubject
             .asObservable()
@@ -63,11 +53,6 @@ final class SearchViewModel: SearchViewModelType, SearchViewModelInputs, SearchV
     }
     
     // MARK: - SearchViewModelInputs
-    private let viewWillAppearSubject = PublishSubject<Void>()
-    func viewWillAppear() {
-        viewWillAppearSubject.onNext(())
-    }
-    
     private let didSelectSubject = PublishSubject<IndexPath>()
     func didSelect(index: IndexPath) {
         didSelectSubject.onNext(index)

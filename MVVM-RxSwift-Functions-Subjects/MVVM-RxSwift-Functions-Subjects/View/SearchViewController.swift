@@ -29,14 +29,6 @@ class SearchViewController: UIViewController {
 
     private func bindViewModel() {
         // MARK: - Inputs
-        rx.viewWillAppear
-            .asObservable()
-            .subscribe(onNext: { [weak self] _ in
-                guard let strongSelf = self else { return }
-                strongSelf.viewModel.viewWillAppear()
-            })
-            .disposed(by: disposeBag)
-        
         tableView.rx.itemSelected
             .asObservable()
             .subscribe(onNext: { [weak self] indexPath in
