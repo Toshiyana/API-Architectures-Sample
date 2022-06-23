@@ -17,7 +17,6 @@
 		9955A79228644031006A07F1 /* MVVM_RxSwift_SubjectsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A79128644031006A07F1 /* MVVM_RxSwift_SubjectsUITestsLaunchTests.swift */; };
 		9955A7B0286444DD006A07F1 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A79E286444DC006A07F1 /* Repo.swift */; };
 		9955A7B2286444DD006A07F1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A7A1286444DC006A07F1 /* ActivityIndicator.swift */; };
-		9955A7B3286444DD006A07F1 /* Rx+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A7A2286444DC006A07F1 /* Rx+UIViewController.swift */; };
 		9955A7B4286444DD006A07F1 /* NetworkingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A7A4286444DC006A07F1 /* NetworkingApi.swift */; };
 		9955A7B5286444DD006A07F1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A7A6286444DC006A07F1 /* SearchViewModel.swift */; };
 		9955A7B7286444DD006A07F1 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A7AB286444DD006A07F1 /* ArticleCell.swift */; };
@@ -68,7 +67,6 @@
 		9955A79128644031006A07F1 /* MVVM_RxSwift_SubjectsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_RxSwift_SubjectsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9955A79E286444DC006A07F1 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		9955A7A1286444DC006A07F1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		9955A7A2286444DC006A07F1 /* Rx+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rx+UIViewController.swift"; sourceTree = "<group>"; };
 		9955A7A4286444DC006A07F1 /* NetworkingApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingApi.swift; sourceTree = "<group>"; };
 		9955A7A6286444DC006A07F1 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		9955A7AB286444DD006A07F1 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				9955A7A1286444DC006A07F1 /* ActivityIndicator.swift */,
-				9955A7A2286444DC006A07F1 /* Rx+UIViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -475,7 +472,6 @@
 				9955A7712864402D006A07F1 /* SceneDelegate.swift in Sources */,
 				9955A7B7286444DD006A07F1 /* ArticleCell.swift in Sources */,
 				9955A7B4286444DD006A07F1 /* NetworkingApi.swift in Sources */,
-				9955A7B3286444DD006A07F1 /* Rx+UIViewController.swift in Sources */,
 				9955A7B0286444DD006A07F1 /* Repo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,6 @@ import RxCocoa
 
 final class SearchViewModel {
     // Inputs
-    let viewWillAppearSubject = PublishSubject<Void>()
     let selectedIndexSubject = PublishSubject<IndexPath>()
     let searchQuerySubject = BehaviorSubject(value: "")
     
@@ -26,16 +25,7 @@ final class SearchViewModel {
         
         let loading = ActivityIndicator()
         self.loading = loading.asDriver()
-        
-        // 検索前に表示するリポジトリ
-        let initialRepos = viewWillAppearSubject
-            .asObservable()
-            .flatMap { _ in
-                networkingService.searchRepos(withQuery: "rxswift")
-                    .trackActivity(loading)
-            }
-            .asDriver(onErrorJustReturn: [])
-        
+                
         let searchRepos = searchQuerySubject
             .asObservable()
             .filter { $0.count > 2 } // 3文字以上の時のみ検索
@@ -47,8 +37,7 @@ final class SearchViewModel {
             }
             .asDriver(onErrorJustReturn: [])
             
-        let repos = Driver.merge(initialRepos, searchRepos) // 2つの同じ方のデータストリームを1つに統合
-        self.repos = repos
+        self.repos = searchRepos
         
         selectedRepoUrl = selectedIndexSubject
             .asObservable()

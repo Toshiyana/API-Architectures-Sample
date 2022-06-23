@@ -28,12 +28,7 @@ class SearchViewController: UIViewController {
     }
 
     private func bindViewModel() {
-        // Inputs
-        rx.viewWillAppear
-            .asObservable()
-            .bind(to: viewModel.viewWillAppearSubject)
-            .disposed(by: disposeBag)
-        
+        // Inputs        
         tableView.rx.itemSelected
             .asObservable()
             .bind(to: viewModel.selectedIndexSubject)
